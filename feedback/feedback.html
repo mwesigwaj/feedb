@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Form</title>
+    <style>
+            body {
+    font-family: Arial, sans-serif;
+    background-color: #6dc8cf;
+    padding: 10px;
+}
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.contact-form input[type="text"],
+        .contact-form input[type="email"] {
+            width: 60%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+}
+.contact-form button {
+            width: 30%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #486e49;
+}
+
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+    <h2>Student Feedback Form</h2>
+    <form method="POST" action="feedback.php">
+    <label for="Student_ID">Student ID:</label> 
+    <input type="text" name="student_id" required><br><br>
+    <label for="Full_Name">Full Name:</label>
+    <input type="text" name="full_name" required><br><br>
+    <label for="Student_Email">Student_Email:</label> 
+    <input type="email" name="student_email" required><br><br>
+    <label for="Faculty">Faculty:</label>
+    <input type="text" name="faculty" required><br><br>
+    <label for="Course_Code">Course_Code:</label> 
+    <input type="text" name="course_code" required><br><br>
+    <label for="Concern">Concern: </label> <br>
+    <textarea name="concern" rows="3" cols="25" placeholder="Enter your suggestion here" required></textarea><br><br>
+    <label for="Study_Time">Study_Time:</label> <br>
+    <input type="radio" name="study_time" value="day" required> Day
+    <input type="radio" name="study_time" value="night" required> Night<br><br>
+
+    <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>
